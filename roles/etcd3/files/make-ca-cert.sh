@@ -60,8 +60,10 @@ for dns in "${node_dns[@]}"; do
 done
 
 mkdir -p bin
-curl -sSL -o ./bin/cfssl "https://pkg.cfssl.org/R1.2/cfssl_$arch"
-curl -sSL -o ./bin/cfssljson "https://pkg.cfssl.org/R1.2/cfssljson_$arch"
+#curl -sSL -o ./bin/cfssl "https://pkg.cfssl.org/R1.2/cfssl_$arch"
+curl -sSL -o ./bin/cfssl "http://10.8.8.10/bin/cfssl"
+#curl -sSL -o ./bin/cfssljson "https://pkg.cfssl.org/R1.2/cfssljson_$arch"
+curl -sSL -o ./bin/cfssljson "http://10.8.8.10/bin/cfssljson"
 chmod +x ./bin/cfssl{,json}
 export PATH="$PATH:${tmpdir}/bin/"
 

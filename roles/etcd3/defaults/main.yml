@@ -1,10 +1,11 @@
 ---
 
-etcd_version: 3.2.13
+etcd_version: 3.3.8
 
 etcd_download_url_base: "https://github.com/coreos/etcd/releases/download/v{{ etcd_version }}"
 etcd_release: "etcd-v{{ etcd_version }}-linux-amd64" 
-etcd_download_url: "{{ etcd_download_url_base }}/{{ etcd_release}}.tar.gz"
+#etcd_download_url: "{{ etcd_download_url_base }}/{{ etcd_release}}.tar.gz"
+etcd_download_url: "http://10.8.8.10/bin/etcd-v3.3.8-linux-amd64.tar.gz"
 
 etcd_bin_path: /usr/local/bin
 etcd_data_dir: /var/lib/etcd
